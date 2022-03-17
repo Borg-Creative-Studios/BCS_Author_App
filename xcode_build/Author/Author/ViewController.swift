@@ -15,12 +15,23 @@ class ViewController: NSViewController, NSApplicationDelegate, WKNavigationDeleg
     @IBOutlet var window: NSView!
     @IBOutlet weak var webView: WKWebView!
     
+    
+    @IBAction func refresh(_ sender: Any){
+        
+        webView.reload()
+    }
+    
+
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        webView.load(URLRequest(url: URL(string: "https://author.borgcreative.com/?utm_term=app")!))
+        webView.load(URLRequest(url: URL(string: "https://author.borgcreative.com/app.html")!))
     }
+    
+   
 
     override var representedObject: Any? {
         didSet {
